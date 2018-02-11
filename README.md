@@ -7,32 +7,40 @@ This project Analyze Google trend hot topics and show most frequency words of re
   <li>hadoop</li>
   <li>WordCloud</li>
 
-Use Google Trend Api get hottest topics
-
 ## Google Trend Api
 
+## Introduction
+
+Unofficial API for Google Trends, Use Google Trend Api get hottest topics.
+
 [Installation](#installation)
+
+[API](#api)
+
 
 ## Installation
 
     pip install pytrends
 
-## Look the slide about the project
-## This include implement 
-google trend Api 
 
-google search Api
+## API
 
-private search engine
+### Connect to Google
 
-Any implement please send me email for free
-# pytrends
+    from pytrends.request import TrendReq
 
-## Introduction
+    pytrends = TrendReq(hl='en-US', tz=360)
 
-Unofficial API for Google Trends
+### Build Payload
+    kw_list = ["Blockchain"]
+    pytrends.build_payload(kw_list, cat=0, timeframe='today 5-y', geo='', gprop='')
 
-Allows simple interface for automating downloading of reports from Google Trends. Main feature is to allow the script to login to Google on your behalf to enable a higher rate limit. Only good until Google changes their backend again :-P. When that happens feel free to contribute!
+Parameters
+
+* `kw_list`
+
+  - *Required*
+  - Keywords to get data for
 
 
 ## Table of contens
