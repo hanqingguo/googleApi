@@ -34,18 +34,18 @@ Unofficial API for Google Trends, Use Google Trend Api get hottest topics.
 ### Build Payload
     kw_list = ["Blockchain"]
     pytrends.build_payload(kw_list, cat=0, timeframe='today 5-y', geo='', gprop='')
-
-### Get Hottest topics
-
-	hot_names = pytrends.trending_searches()
-	
-Parameters
+    Parameters
 
 * `kw_list`
 
   - *Required*
   - Keywords to get data for
 
+
+### Get Hottest topics
+
+	hot_names = pytrends.trending_searches()
+	
 
 ## Table of contens
 
