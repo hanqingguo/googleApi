@@ -4,7 +4,7 @@ This project Analyze Google trend hot topics and show most frequency words of re
 
 The spider.py collect all hottest topics and related topics, then put those topics to google search api,
 
-get all articals urls related those topics, use beautiful soup to parse words and save into 100 .txt file, each of them larger than 20MB.
+get all articals urls related those topics, use beautiful soup to parse words and save into 100 .txt files, each of them larger than 20MB.
 
   [Google Trend Api](#google-trend-api)
   
