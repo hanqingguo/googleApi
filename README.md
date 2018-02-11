@@ -2,7 +2,7 @@
 
 This project Analyze Google trend hot topics and show most frequency words of related News.
 
-  [Google Trend Api](#google trend api)
+  [Google Trend Api](#google-trend-api)
   <li>Google Search Api</li>
   <li>hadoop</li>
   <li>WordCloud</li>
