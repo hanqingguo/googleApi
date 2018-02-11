@@ -108,6 +108,9 @@ The result .txt files then zipped and copied to hdfs system, running wordcount s
 
 Picture below shows result of word count running in hadoop.
 
+![WordcountResult](picture/wordcount.png)
+
 ## WordCloud
 
-
+WordCloud.ipynb shows convert wordcount result to wordcloud
+![Result](picture/wordcloud.png)
