@@ -103,3 +103,11 @@ search_term is what we want to search. Here my search engine only search artical
 			urls.append(search_results[i]['pagemap']['metatags'][0]['og:url'])
 	    return urls
 
+## Hadoop
+The result .txt files then zipped and copied to hdfs system, running wordcount script.
+
+Picture below shows result of word count running in hadoop.
+
+## WordCloud
+
+
