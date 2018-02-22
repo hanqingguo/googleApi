@@ -92,6 +92,30 @@ search_term is what we want to search. Here my search engine only search artical
 	    
 	google_search("中国",my_api_key,my_cse_id)
 	
+### Customize API res TYPE, only return images.
+
+	from googleapiclient.discovery import build
+	my_api_key = "AIzaSyBDwrrdkFcL8QEbQT-wqlm8DrEaG1IO1nk"
+	my_cse_id = "015303713816810430314:xyvkd4xnie8"
+	# Another cse 
+	def google_search(search_term, api_key, cse_id, **kwargs):
+	    service = build("customsearch", "v1", developerKey=api_key)
+	    res = service.cse().list(
+		start=10,		#from 10 to search 10 result, need to change this value to get different result
+		q=search_term, 
+		cx=cse_id,
+		searchType="image", 	#only search images
+		imgType='photo',	#type has different types	
+		# https://developers.google.com/custom-search/json-api/v1/reference/cse/list
+		num=10,
+		fileType="png").execute()
+	    return res['items']
+    
+	result = google_search("pedestrian street",my_api_key,my_cse_id)
+	for re in result:
+    		print (re['link'])
+	
+	# will print all image urls 
 	
 ### Use function below to get all urls of articals
 	
@@ -102,6 +126,7 @@ search_term is what we want to search. Here my search engine only search artical
 		    if('og:url' in search_results[i]['pagemap']['metatags'][0].keys()):
 			urls.append(search_results[i]['pagemap']['metatags'][0]['og:url'])
 	    return urls
+	    
 
 ## Hadoop
 The result .txt files then zipped and copied to hdfs system, running wordcount script.
